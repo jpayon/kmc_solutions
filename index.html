@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Julius Ayon</title>
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+        
+        .arrow {
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+        }
+        
+        .down {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+        
+        .dropbtn {
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            margin-left: 8px;
+            cursor: pointer;
+        }
+        
+        .dropdown.text {
+            padding: 10px;
+            font-size: 18px;
+            margin-left: 8px;
+            cursor: pointer;
+            display: inline-block;
+            border-style: solid;
+            border-color: #ACA7A6;
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        button.filter-button {
+            width: 60px;
+            height: 40px;
+            background: none;
+            border-color: #214D61;
+            border-width: 3px;
+        }
+        
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+        
+        .down {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+        
+        p.content.text {
+            margin-left: 15px;
+        }
+        
+        p.location.text {
+            background: #214D61;
+            color: white;
+            padding: 5px 5px 5px 5px;
+            width: 300px;
+            margin-left: 8px;
+            text-align: center;
+        }
+        
+        .sidebar {
+            height: 100%;
+            width: 355px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            overflow-x: hidden;
+            padding-top: 16px;
+        }
+        
+        .sidebar a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #000000;
+            display: block;
+        }
+        
+        .sidebar a:hover {
+            color: #818181;
+        }
+        
+        .main {
+            margin-left: 320px;
+            padding: 0px 10px;
+        }
+        
+        .sidebar .search-container {
+            float: right;
+        }
+        
+        .sidebar input[type=text] {
+            padding: 6px;
+            margin-top: 8px;
+            margin-left: 8px;
+            text-decoration: none;
+            font-size: 20px;
+            width: 184px;
+        }
+        
+        button.search-button {
+            width: 120px;
+            height: 40px;
+            background: none;
+            border-color: #214D61;
+            border-width: 3px;
+        }
+        
+        @media screen and (max-height: 450px) {
+            .sidebar {
+                padding-top: 15px;
+            }
+            .sidebar a {
+                font-size: 18px;
+            }
+            .main.map {
+                display: none;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .sidebar input[type=text] {
+                width: 265px;
+            }
+            p.location.text {
+                padding: 10px 75px;
+                margin-left: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <form>
+            <input type="text" placeholder="Enter Location" name="search">
+            <button type="submit" class="search-button">SEARCH</button>
+        </form>
+        <div class="dropdown">
+            <p class="dropdown text">United States of America &nbsp;&nbsp;<img src="images/chevron_down.png" alt="Paris" style="width:20px"></p>
+            <button type="submit" class="filter-button"><i class="fa fa-filter" style="font-size:20px"></i></button>
+            <div class="dropdown-content">
+                <a href="#">Address 1</a>
+                <a href="#">Address 2</a>
+                <a href="#">Address 3</a>
+                <a href="#">Address 4</a>
+                <a href="#">Address 5</a>
+                <a href="#">Address 6</a>
+                <a href="#">Address 7</a>
+                <a href="#">Address 8</a>
+                <a href="#">Address 9</a>
+                <a href="#">Address 10</a>
+            </div>
+            <p class="location text">There are 10 locations near you</p>
+        </div>
+    </div>
+
+    <div class="main map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53022.54325642418!2d-118.38838854305511!3d33.84045854985452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b4d158a9f097%3A0x2045d9a6520da1db!2sTorrance%2C%20CA%2090503%2C%20USA!5e0!3m2!1sen!2sph!4v1688551532797!5m2!1sen!2sph"
+            width="1150" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" margin-left="20px"></iframe>
+    </div>
+
+</body>
+
+</html>
